@@ -29,6 +29,7 @@ void draw_color_bar(IFramebuffer& buf, int old_xpos, int xpos, int width);
 void draw_test_pattern(IFramebuffer &fb, YUVType yuvt = YUVType::BT601_Lim);
 
 void save_raw_frame(IFramebuffer& fb, const char *filename);
+float compare_framebuffers(IFramebuffer& a, IFramebuffer& b);
 }
 
 #define ARRAY_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))

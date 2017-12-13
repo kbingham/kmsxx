@@ -64,4 +64,6 @@ void init_pykmstest(py::module &m)
 	m.def("save_raw_frame", [](Framebuffer& fb, const char * filename) {
 		save_raw_frame(fb, filename);
 	});
+	m.def("compare_framebuffers", [](Framebuffer& a, Framebuffer& b) {
+		return compare_framebuffers(a, b); } );
 }
