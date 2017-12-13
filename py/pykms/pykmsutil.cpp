@@ -59,4 +59,9 @@ void init_pykmstest(py::module &m)
 	} );
 	m.def("draw_text", [](Framebuffer& fb, uint32_t x, uint32_t y, const string& str, RGB color) {
 		draw_text(fb, x, y, str, color); } );
+
+	// Verification and Validation
+	m.def("save_raw_frame", [](Framebuffer& fb, const char * filename) {
+		save_raw_frame(fb, filename);
+	});
 }
